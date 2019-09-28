@@ -1,4 +1,5 @@
 click==6.7
+cmake==0.7.1
 enum-compat==0.0.2
 enum34==1.1.6
 eventlet==0.20.0
@@ -8,6 +9,7 @@ gevent==1.2.2
 gevent-websocket==0.10.1
 greenlet==0.4.12
 gunicorn==19.7.1
+dlib>=19.3.0
 itsdangerous==0.24
 Jinja2==2.9.6
 MarkupSafe==1.0
@@ -20,5 +22,4 @@ python-socketio==1.7.7
 redis==2.10.5
 six==1.10.0
 Werkzeug==0.12.2
-face_recognition==1.2.3
-cmake
+face_recognition
