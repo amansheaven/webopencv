@@ -21,3 +21,4 @@ redis==2.10.5
 six==1.10.0
 Werkzeug==0.12.2
 face_recognition==1.2.3
+cmake
