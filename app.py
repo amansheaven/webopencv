@@ -34,7 +34,19 @@ def login_page():
     print('Swarm :: ', config.swarm)
     return jsonify({'messege' : disp_msg})
 
+@app.route('/resetswarm')
+def reset_swarm():
+    print('before Flush ::',config.swarm)
+    config.flushswarm()
+    print('After Flush ::',config.swarm)
+    return jsonify({
+    'swarm' : config.swarm,
+    })
 
+@app.route('/viewswarm')
+def view_swarm():
+    print(config.swarm)
+    return "Users in swarm"
 
 #---------------- Video Socket Connections --------------------------#
 @socketio.on('input image', namespace='/test')
