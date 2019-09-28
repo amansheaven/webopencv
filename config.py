@@ -27,25 +27,25 @@ swarm = []
 
 
 def addswarm(usrid,gpsx,gpsy):
-    if(usrid == p1.id and gpsx==s1.gpsx and gpsy == s1.gpsy):
-        swarm.append(p1,s1)
+    if(p1.id == int(usrid) and s1.gpsx==int(gpsx) and s1.gpsy == int(gpsy)):
+        swarm.append((p1,s1))
         return "User Checked in at Big Bazaar"
 
-    elif(usrid == p1.id and gpsx==s2.gpsx and gpsy == s2.gpsy):
-        swarm.append(p1,s2)
+    elif(p1.id == int(usrid) and s2.gpsx==int(gpsx) and s2.gpsy == int(gpsy)):
+        swarm.append((p1,s2))
         return "User Checked in at NEC Store"
 
-    elif(usrid == p2.id and gpsx==s1.gpsx and gpsy == s1.gpsy):
-        swarm.append(p2,s1)
+    elif(p2.id == int(usrid) and s1.gpsx==int(gpsx) and s1.gpsy == int(gpsy)):
+        swarm.append((p2,s1))
         return "User Checked in at Big Bazaar"
 
-    elif(usrid == p2.id and gpsx==s2.gpsx and gpsy == s2.gpsy):
-        swarm.append(p2,s2)
+    elif(p2.id == int(usrid) and s2.gpsx==int(gpsx) and s2.gpsy == int(gpsy)):
+        swarm.append((p2,s2))
         return "User Checked in at NEC Store"
 
     else :
         print("Cannot detect Check In")
-        return "Cannot check you IN"
+        return "Cannot check you InN"
 
 def delswarm(p,s):
     swarm.remove((p,s))

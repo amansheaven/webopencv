@@ -29,8 +29,9 @@ def login_page():
     gpsx = request.form['gpsx']
     gpsy = request.form['gpsy']
     print(usrid,gpsx,gpsy)
-    app.logger.info(usrid,gpsx,gpsy)
+    # app.logger.info(usrid,gpsx,gpsy)
     disp_msg = config.addswarm(usrid,gpsx,gpsy)
+    print('Swarm :: ', config.swarm)
     return jsonify({'messege' : disp_msg})
 
 
