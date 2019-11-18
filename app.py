@@ -1,5 +1,5 @@
 from sys import stdout
-from process.py import webopencv
+from process import webopencv
 import logging
 from flask import Flask, render_template, Response, request, jsonify
 from flask_socketio import SocketIO
