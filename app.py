@@ -12,41 +12,12 @@ import config
 #----------------- Video Transmission ------------------------------#
 app = Flask(__name__)
 app.logger.addHandler(logging.StreamHandler(stdout))
-app.config['SECRET_KEY'] = 'secret!'
 app.config['DEBUG'] = True
 socketio = SocketIO(app)
 camera = Camera(Makeup_artist())
 
 #---------------- Video Transmission --------------------------------#
 
-
-
-#-------------- CheckIn facility Variables -----------------------------------#
-
-@app.route('/checkin', methods=['POST'])
-def login_page():
-    usrid = request.form['usrid']
-    gpsx = request.form['gpsx']
-    gpsy = request.form['gpsy']
-    print(usrid,gpsx,gpsy)
-    # app.logger.info(usrid,gpsx,gpsy)
-    disp_msg = config.addswarm(usrid,gpsx,gpsy)
-    print('Swarm :: ', config.swarm)
-    return jsonify({'messege' : disp_msg})
-
-@app.route('/resetswarm')
-def reset_swarm():
-    print('before Flush ::',config.swarm)
-    config.flushswarm()
-    print('After Flush ::',config.swarm)
-    return jsonify({
-    'swarm' : config.swarm,
-    })
-
-@app.route('/viewswarm')
-def view_swarm():
-    print(config.swarm)
-    return "Users in swarm"
 
 #---------------- Video Socket Connections --------------------------#
 @socketio.on('input image', namespace='/test')
