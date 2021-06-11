@@ -6,7 +6,7 @@ This is a toy project for learning how to use a couple of python libraries.
 2) The server does some processing on the video stream
 3) The client receives the processed video stream and re-displays the results in a different frame
 
-In the demo site, the server is simply flipping the image horizontally. You could imagine it doing something more sophisticated (e.g. applying some filters), but obviously I was too lazy to implement anything cool.
+In the demo site, the server is simply flipping the image horizontally. You could imagine it doing something more useful (e.g. applying some filters, OpenCv processing, detections from OpenCV).
 
 ### Demo
 [Live Demo](https://python-stream-video.herokuapp.com)
