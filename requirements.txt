@@ -13,7 +13,7 @@ dlib>=19.3.0
 itsdangerous==0.24
 Jinja2==2.11.3
 MarkupSafe==1.0
-numpy==1.21.0
+numpy==1.22.0
 olefile==0.44
 opencv-python==4.2.0.32
 Pillow==9.0.0
